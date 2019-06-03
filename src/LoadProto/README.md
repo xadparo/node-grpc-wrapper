@@ -1,7 +1,11 @@
-# 클라이언트에서 사용 시
+# LoadProto의 역할
 
-1. protoDescriptor\[package\]\[service\]는 service constructor입니다.
-1. service constructor에 address, grpc credential을 넣으면 해당 서비스를 사용할 수 있는 클라이언트가 생성됩니다.
+1. protobuf file의 path를 받아서 protobuf descriptor를 반환 합니다.
+
+### 클라이언트에서 protobuf descriptor를 사용 하는 방법
+
+1. protoDescriptor\[package\]\[service\]는 client용 service constructor입니다.
+1. service constructor에 address, grpc credential을 넣으면 client용 grpc connection이 생성됩니다.
 
 example
 
