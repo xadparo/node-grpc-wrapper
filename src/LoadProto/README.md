@@ -6,10 +6,11 @@
 example
 
 ```javascript
-var protoDescriptor = LoadProto('file.proto')
-  , { fooPackage } = protoDescriptor
+var fooBarProtoDescriptor = LoadProto('foobar.proto')
+  , { fooPackage } = fooBarProtoDescriptor
   , { barService } = fooPackage
   , fooBarClient = new barService('localhost:22222', grpc.credentials.createInsecure())
+  // 예제라서 기본 credential을 사용 할 뿐, 해당 grpc 서비스에서 사용된 credential 정보를 동일하게 사용해야 합니다.
 
 fooBarClient.func({
   foo: 123,
