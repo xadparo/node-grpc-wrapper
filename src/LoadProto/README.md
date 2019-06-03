@@ -2,7 +2,7 @@
 
 1. protobuf file의 path를 받아서 protobuf descriptor를 반환 합니다.
 
-### 클라이언트에서 protobuf descriptor를 사용 하는 방법
+### Client에서 protobuf descriptor를 사용 하는 방법
 
 1. protoDescriptor\[package\]\[service\]는 client용 service constructor입니다.
 1. service constructor에 address, grpc credential을 넣으면 client용 grpc connection이 생성됩니다.
